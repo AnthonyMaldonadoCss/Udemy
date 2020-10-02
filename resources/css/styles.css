@@ -49,8 +49,8 @@ section{
 	padding: 1%;  
 }
 header{
-	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.7)),to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
 	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.7)),to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
 	background-size: cover;
 	background-position: center;
@@ -230,23 +230,31 @@ input[type=submit]:hover {
 	float: left;
 	margin-top: 20px;
 }
+.logo-black {
+	display: none;
+	height: 50px;
+	width: auto;
+	float: left;
+	margin: 5px 0;
+}
 .main-nav {
 	float: right;
 	list-style: none;
-	margin-top: 65px;
+	margin-top: 55px;
 }
 .main-nav li{
 	display: inline-block;
 	margin-left: 40px;
 }
-/*.main-nav li a{
+.main-nav li a{
 	color:#fff;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 90%;
-}*/
+	font-size: 100%;
+	text-rendering: optimizeLegibility;
+}
 
-.main-nav li a:link {
+.main-nav li a:link, .main-nav li a:visited {
 	padding: 8px 0;
 	color:#fff;
 	text-decoration: none;
@@ -257,7 +265,7 @@ input[type=submit]:hover {
 	-o-transition: border-bottom 0.2s;
 	transition: border-bottom 0.2s;
 }
-.main-nav li a:visited {
+/*.main-nav li a:visited {
 	padding: 8px 0;	
 	color:#fff;
 	text-decoration: none;
@@ -267,13 +275,68 @@ input[type=submit]:hover {
 	-webkit-transition: border-bottom 0.2s;
 	-o-transition: border-bottom 0.2s;
 	transition: border-bottom 0.2s;
-}
+}*/
 .main-nav li a:hover{
 	border-bottom: 2px solid #e67e22;
 }
 .main-nav li a:activate{
 	border-bottom: 2px solid #e67e22;
 }
+
+/********** MOBILE NAVI *********/
+
+.mobile-nav-icon {
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+.mobile-nav-icon i {
+	font-size: 200%;
+	color: #fff;
+}
+
+
+/************************************/
+/********STYCKY ANIMATION***********/
+/**********************************/
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255,255,255,.98);
+	-webkit-box-shadow: 02px 2px #efefef;
+	        box-shadow: 02px 2px #efefef;
+	-webkit-transition-duration: 0.9s;
+	     -o-transition-duration: 0.9s;
+	        transition-duration: 0.9s;
+	z-index: 9999;
+} 
+
+.sticky .main-nav { margin-top: 15px;}
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+	padding: 15px 0;
+	color:#555;
+}
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
+
+.sticky .main-nav li a:hover{
+	border-bottom: 2px solid #e67e22;
+}
+.sticky .main-nav li a:activate{
+	border-bottom: 2px solid #e67e22;
+}
+
+
+/**************************************/
+
+
+
+
 /*****FEATURES**********/
 
 .section-features .long-copy {
@@ -400,9 +463,9 @@ border: 0;
 /********TESTIMONIALS********/
 .section-testimonials {
 
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .8)), to(rgba(0, 0, 0, .8))), url(img/back-customers.jpg);
-
 	background-image: -o-linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(img/back-customers.jpg);
+
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .8)), to(rgba(0, 0, 0, .8))), url(img/back-customers.jpg);
 
 	background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(img/back-customers.jpg);
 	background-size: cover;
@@ -536,8 +599,8 @@ footer {
 	background-color: #333;
 	padding: 45px;
 	font-size: 80%;
-	background: -webkit-gradient(linear, left top, left bottom, from(#666d6b), to(#555));
 	background: -o-linear-gradient(#666d6b, #555);
+	background: -webkit-gradient(linear, left top, left bottom, from(#666d6b), to(#555));
 	background: linear-gradient(#666d6b, #555);
 }
 .footer-nav {
@@ -597,4 +660,28 @@ footer p {
 	color: #888;
 	text-align: center;
 	margin-top: 20px;
+}
+
+/*****ANIMACIONES********/
+
+.js--wp-1, .js--wp-3 {
+	opacity: 0;
+}
+
+.js--wp-1.animate__bounce,.js--wp-3.animate__fadeInUp {
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+			opacity: 1;
+}
+
+.animate__shakeX {
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+}
+
+.animate__pulse {
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 1s;
+	        animation-delay: 1s;
 }

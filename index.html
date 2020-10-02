@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,19 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/media_querys.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="resources/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="resources/img//favicon/faviconfavicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="resources/img//favicon/favicon-16x16.png">
+	<link rel="manifest" href="resources/img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="resources/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="resources/img/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/resources/img/favicon /browserconfig.xml">
+	<meta name="theme-color" content="#5d3a3a">
+
+	<meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and healtly meal to as many people as possible"/>
 	<title>Omnifood</title>
 </head>
 <body>
@@ -19,22 +32,24 @@
 		<nav>
 			<div class="row">
 				<img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
-				<ul class="main-nav">
+				<img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
+				<ul class="main-nav js--main-nav">
 					<li> <a href="#section-features">Food Delivery</a></li>
 					<li> <a href="#section-steps">How it works</a></li>
 					<li> <a href="#section-cities">Our cities</a></li>
-					<li> <a href="#section-form">Sing Up</a></li>
+					<li> <a href="#section-form">Sign in</a></li>
 				</ul>
+				<a class="mobile-nav-icon js--nav-icon" href="#"><i class="ion-navicon-round"></i></a>
 			</div>
 		</nav>
 		<div class="hero-text-box">
-			<h1>Goodbye junk food. <br> Hello super healtly meals.</h1>
-			<a class="btn btn-full" href="#">I'm hungry</a>
-			<a class="btn btn-ghost" href="#">Show me more</a>
+			<h1>Goodbye junk food. <br> Hello super healthy meals.</h1>
+			<a class="btn btn-full js--click-hungry" href="#section-plans">I'm hungry</a>
+			<a class="btn btn-ghost" href="#section-features">Show me more</a>
 		</div>
 	</header>
 
-	<section class="section-features" id="section-features">
+	<section class="section-features js--section-features" id="section-features">
 		<div class="row">
 			
 			<h2>Get food fast &mdash; not fast food</h2>
@@ -42,7 +57,7 @@
 				Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at ir, we promise!
 			</p>
 		</div>
-		<div class="row">
+		<div class="row js--wp-1 animate__bounce">
 			<div class="col span-1-of-4 box">
 				<i class="ion-ios-infinite-outline icon-big"></i>
 				<h3>Up to 365 days/year</h3>
@@ -117,7 +132,7 @@
 		</div>
 		<div class="row">
 			<div class="col span-1-of-2 steps-box">
-				<img class="app-screen" src="resources/img/app-iPhone.png" alt="Omnifood app on iphone">
+				<img class="app-screen js--wp-2 animate__shakeX" src="resources/img/app-iPhone.png" alt="Omnifood app on iphone">
 			</div>
 			<div class="col span-1-of-2 steps-box">
 				<div class="works-step">
@@ -246,13 +261,13 @@
 
 					<!--	SECTION PLANS  	-->
 
-	<section class="Section-plans">
+	<section class="Section-plans" id="section-plans">
 		<div class="row">
 			<h2> Start eating healthy today</h2>
 		</div>
-		<div class="row">
+		<div class="row js--wp-3 animate__fadeInUp">
 			<div class="col span-1-of-3">
-				<div class="plan-box">
+				<div class="plan-box js--wp-4 animate__pulse">
 					<div>
 						<h3><strong>Premium</strong></h3>
 						<p class="plan-price">$399 <span>/ month</span></p>
@@ -260,14 +275,14 @@
 					</div>
 					<div>
 						<ul>
-							<li><i class="ion-ios-checkmark-empty icon-small"></i>I meal every day</li>
+							<li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal every day</li>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
-							<li><i class="ion-ios-checkmark-empty icon-small"></i>Acces to newest creations</li>
+							<li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
 						</ul>
 					</div>
 					<div>
-						<a href="#" class="btn btn-full">Sing up now!</a>
+						<a href="#" class="btn btn-full">Sign up now!</a>
 					</div>
 				</div>
 			</div>
@@ -282,12 +297,12 @@
 						<ul>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal 10 days/month</li>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
-							<li><i class="ion-ios-checkmark-empty icon-small"></i>Acces to newest creations</li>
+							<li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
 						</ul>
 					</div>
 					<div>
-						<a href="#" class="btn btn-ghost">Sing up now!</a>
+						<a href="#" class="btn btn-ghost">Sign up now!</a>
 					</div>
 				</div>
 			</div>
@@ -302,12 +317,12 @@
 						<ul>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal</li>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>Order from 8 am to 12 pm</li>
-							<li><i class="ion-ios-close-empty icon-small"></i></li>
+							<li><i class="ion-ios-close-empty icon-small"></i>Access to newest creations</li>
 							<li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
 						</ul>
 					</div>
 					<div>
-						<a href="#" class="btn btn-ghost">Sing up now!</a>
+						<a href="#" class="btn btn-ghost">Sign up now!</a>
 					</div>
 				</div>
 			</div>
@@ -361,7 +376,7 @@
 				</div>
 				<div class="row">
 					<div class="col span-1-of-3">
-						<label for="message">Drop us a line</label>
+						<label>Drop us a line</label>
 					</div>
 					<div class="col span-2-of-3">
 						<textarea name="message" placeholder="Your message"></textarea>
@@ -369,7 +384,7 @@
 				</div>
 				<div class="row">
 					<div class="col span-1-of-3">
-						<label for="">&nbsp;</label>
+						<label>&nbsp;</label>
 					</div>
 					<div class="col span-2-of-3" id="Submit">
 						<input type="submit" value="Send it!">
@@ -409,6 +424,7 @@
 						<!--	END FOOTER   -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="resources/Js/animation.js"></script>	
+<script src="resources/Js/animation.js"></script>
+<script src="resources/Js/script.js"></script>
 </body>
 </html>
